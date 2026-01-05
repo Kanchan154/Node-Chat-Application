@@ -39,8 +39,8 @@ app.use('/api/messages', messageRoutes)
 // used to get users 
 app.use("/api/users", userRouters)
 
+// endpoint that doesnot exist in the backend and if user try to access that, the user will get the initial page
 app.get("*", (req, res) => {
-
     // setting the header 
     res.setHeader('Content-Type', 'text/html');
     // sending the file 
