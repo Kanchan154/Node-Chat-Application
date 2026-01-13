@@ -22,14 +22,13 @@ const protectRoute = async (req, res, next) => {
         }
 
         req.user = user;
-
         next();
 
-    } catch (error) {
+    } 
+    catch (error) {
         console.log("Error in Protected Route Controller : ", error.message)
         res.status(500).json({ error: "Internal Server Error" })
-
     }
 };
 
-export default protectRoute
+export default protectRoute;
