@@ -7,6 +7,7 @@ const UseGetMessages = () => {
     const { messages, setMessages, selectedConversation } = useConversation();
 
     useEffect(() => {
+        // get message hook
         const getMessages = async () => {
             setloading(true);
             try {
@@ -31,7 +32,8 @@ const UseGetMessages = () => {
         if (selectedConversation?._id) getMessages();
     }, [selectedConversation?._id, setMessages])
 
+    // returning the functions that can be accessed by the components in the UI
     return { messages, loading };
 }
 
-export default UseGetMessages
+export default UseGetMessages;
