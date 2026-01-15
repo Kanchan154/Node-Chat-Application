@@ -12,10 +12,12 @@ const io = new Server(server, {
     } //TODO: set this to the actual domain of your frontend or use a more secure method if you're
 });
 
+// getting Receiver socket id
 export const getReceiverSocketId = (RecieverID) => {
     return userSocketMap[RecieverID];
 }
 
+// using socket mapping
 const userSocketMap = {};  //userid : socket.id
 io.on('connection', (socket) => {
     console.log("New client connected", socket.id);
@@ -34,4 +36,4 @@ io.on('connection', (socket) => {
     })
 })
 
-export { app, io, server }
+export { app, io, server };
