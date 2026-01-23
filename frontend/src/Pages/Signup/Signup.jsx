@@ -27,7 +27,6 @@ const Signup = () => {
                         <span className='text-blue-500'>Whats Chat </span><hr /><br />
                         Register Yourself</h1>
 
-
                     <form className='m-4' onSubmit={handleSubmit}>
 
                         {/* input for Name */}
