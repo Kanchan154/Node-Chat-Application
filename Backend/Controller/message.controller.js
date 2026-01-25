@@ -30,7 +30,6 @@ export const sendMessage = async (req, res) => {
             conversation.messages.push(newMessage._id);
         }
 
-        
         // save both the message and conversation in parallel
         await Promise.all([conversation.save(), newMessage.save()])
         
@@ -73,4 +72,4 @@ export const getMessage = async (req, res) => {
         console.error("Error in getMessage Controller : ", error.message)
         res.status(500).json({ error: "Internal Server Error" })
     }
-}
+};
