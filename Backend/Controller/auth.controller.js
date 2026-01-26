@@ -101,4 +101,4 @@ export const logoutUser = (req, res) => {
         console.error("Error in Logout Controller : " , error.message)
         res.status(500).json({error:"Internal Server Error"})
     }
-}
+};
